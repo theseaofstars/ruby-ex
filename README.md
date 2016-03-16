@@ -1,19 +1,19 @@
 Ruby Sample App on OpenShift
 ============================
 
-This is a basic ruby application for OpenShift v3 that you can use as a starting point to develop your own application and deploy it on an [OpenShift](https://github.com/openshift/origin) cluster.
+This is a basic ruby application for OpenShift v3 that you can use as a starting point to develop your own application and deploy it on an [OpenShift](https://github.com/cetc-skyark/origin) cluster.
 
-If you'd like to install it, follow [these directions](https://github.com/openshift/ruby-ex/blob/master/README.md#installation).  
+If you'd like to install it, follow [these directions](https://github.com/cetc-skyark/ruby-ex/blob/master/README.md#installation).  
 
 The steps in this document assume that you have access to an OpenShift deployment that you can deploy applications on.
 
 ###Installation: 
-These steps assume your OpenShift deployment has the default set of ImageStreams defined.  Instructions for installing the default ImageStreams are available [here](http://docs.openshift.org/latest/admin_guide/install/first_steps.html).  Instructions for installing the default ImageStreams are available [here](http://docs.openshift.org/latest/admin_guide/install/first_steps.html).  If you are defining the set of ImageStreams now, remember to pass in the proper cluster-admin credentials and to create the ImageStreams in the 'openshift' namespace.
+These steps assume your OpenShift deployment has the default set of ImageStreams defined.  Instructions for installing the default ImageStreams are available [here](http://docs.cetc-skyark.org/latest/admin_guide/install/first_steps.html).  Instructions for installing the default ImageStreams are available [here](http://docs.cetc-skyark.org/latest/admin_guide/install/first_steps.html).  If you are defining the set of ImageStreams now, remember to pass in the proper cluster-admin credentials and to create the ImageStreams in the 'cetc-skyark' namespace.
 
-1. Fork a copy of [ruby-ex](https://github.com/openshift/ruby-ex)
+1. Fork a copy of [ruby-ex](https://github.com/cetc-skyark/ruby-ex)
 2. Add a Ruby application from your new repository:
 
-		$ oc new-app openshift/ruby-20-centos7~https://github.com/< yourusername >/ruby-ex 
+		$ oc new-app cetc-skyark/ruby-20-centos7~https://github.com/< yourusername >/ruby-ex 
 
 3. A build should start immediately.  To run another build, run:
 
@@ -53,7 +53,7 @@ In this case, the IP for ruby-ex is 172.30.97.209 and it is on port 8080.
 
 ###Debugging Unexpected Failures
 
-Review some of the common tips and suggestions [here](https://github.com/openshift/origin/blob/master/docs/debugging-openshift.md).
+Review some of the common tips and suggestions [here](https://github.com/cetc-skyark/origin/blob/master/docs/debugging-cetc-skyark.md).
 
 ###Adding Webhooks and Making Code Changes
 Since OpenShift V3 does not provide a git repository out of the box, you can configure your github repository to make a webhook call whenever you push your code.

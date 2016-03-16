@@ -1,0 +1,51 @@
+{
+      "kind": "ImageStream",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "ruby-private",
+        "annotations": {
+            "openshift.io/image.insecureRepository": "true"
+        }
+      },
+      "spec": {
+        "tags": [
+          {
+            "name": "latest",
+            "from": {
+              "Kind": "ImageStreamTag",
+              "Name": "2.0"
+            }
+          },
+          {
+            "name": "2.0",
+            "annotations": {
+              "description": "Build and run Ruby 2.0 applications",
+              "iconClass": "icon-ruby",
+              "tags": "builder,ruby,private-instant-app",
+              "supports": "ruby:2.0,ruby",
+              "version": "2.0",
+              "sampleRepo": "https://github.com/theseaofstarts/ruby-ex.git"
+            },
+            "from": {
+              "Kind": "DockerImage",
+              "Name": "registry.cetc-cloud.com:5000/ruby-20-rhel7:latest"
+            }
+          },
+          {
+            "name": "2.2",
+            "annotations": {
+              "description": "Build and run Ruby 2.2 applications",
+              "iconClass": "icon-ruby",
+              "tags": "builder,ruby,private-instant-app",
+              "supports": "ruby:2.2,ruby",
+              "version": "2.2",
+              "sampleRepo": "https://github.com/theseaofstars/ruby-ex.git"
+            },
+            "from": {
+              "Kind": "DockerImage",
+              "Name": "registry.cetc-cloud.com:5000/ruby-22-rhel7:latest"
+            }
+          }
+        ]
+      }
+    }
