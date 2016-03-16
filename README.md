@@ -1,14 +1,14 @@
-Ruby Sample App on OpenShift
+Ruby Sample App on cetc-skyark
 ============================
 
-This is a basic ruby application for OpenShift v3 that you can use as a starting point to develop your own application and deploy it on an [OpenShift](https://github.com/cetc-skyark/origin) cluster.
+This is a basic ruby application for cetc-skyark v3 that you can use as a starting point to develop your own application and deploy it on an [cetc-skyark](https://github.com/cetc-skyark/origin) cluster.
 
 If you'd like to install it, follow [these directions](https://github.com/cetc-skyark/ruby-ex/blob/master/README.md#installation).  
 
-The steps in this document assume that you have access to an OpenShift deployment that you can deploy applications on.
+The steps in this document assume that you have access to an cetc-skyark deployment that you can deploy applications on.
 
 ###Installation: 
-These steps assume your OpenShift deployment has the default set of ImageStreams defined.  Instructions for installing the default ImageStreams are available [here](http://docs.cetc-skyark.org/latest/admin_guide/install/first_steps.html).  Instructions for installing the default ImageStreams are available [here](http://docs.cetc-skyark.org/latest/admin_guide/install/first_steps.html).  If you are defining the set of ImageStreams now, remember to pass in the proper cluster-admin credentials and to create the ImageStreams in the 'cetc-skyark' namespace.
+These steps assume your cetc-skyark deployment has the default set of ImageStreams defined.  Instructions for installing the default ImageStreams are available [here](http://docs.cetc-skyark.org/latest/admin_guide/install/first_steps.html).  Instructions for installing the default ImageStreams are available [here](http://docs.cetc-skyark.org/latest/admin_guide/install/first_steps.html).  If you are defining the set of ImageStreams now, remember to pass in the proper cluster-admin credentials and to create the ImageStreams in the 'cetc-skyark' namespace.
 
 1. Fork a copy of [ruby-ex](https://github.com/cetc-skyark/ruby-ex)
 2. Add a Ruby application from your new repository:
@@ -56,14 +56,14 @@ In this case, the IP for ruby-ex is 172.30.97.209 and it is on port 8080.
 Review some of the common tips and suggestions [here](https://github.com/cetc-skyark/origin/blob/master/docs/debugging-cetc-skyark.md).
 
 ###Adding Webhooks and Making Code Changes
-Since OpenShift V3 does not provide a git repository out of the box, you can configure your github repository to make a webhook call whenever you push your code.
+Since cetc-skyark V3 does not provide a git repository out of the box, you can configure your github repository to make a webhook call whenever you push your code.
 
 1. From the console navigate to your project  
 2. Click on Browse > Builds  
 3. From the view for your Build click on the link to display your GitHub webhook and copy the url.  
 4. Navigate to your repository on GitHub and click on repository settings > webhooks  
-5. Paste your copied webhook url provided by OpenShift - Thats it!  
-6. After you save your webhook, if you refresh your settings page you can see the status of the ping that Github sent to OpenShift to verify it can reach the server.  
+5. Paste your copied webhook url provided by cetc-skyark - Thats it!  
+6. After you save your webhook, if you refresh your settings page you can see the status of the ping that Github sent to cetc-skyark to verify it can reach the server.  
 
 ###License
 This code is dedicated to the public domain to the maximum extent permitted by applicable law, pursuant to [CC0](http://creativecommons.org/publicdomain/zero/1.0/).
